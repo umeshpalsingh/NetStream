@@ -1,0 +1,52 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+input[type="checkbox"] {
+    height: auto;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    overflow-wrap: break-word;
+}
+
+a, p {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+}
