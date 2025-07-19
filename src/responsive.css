@@ -1,0 +1,12 @@
+@media (max-width: 575px) {
+    .netflix-form {
+        width: 100%;
+        padding: 40px 30px;
+    }
+    .input-box {
+        width: 100%;
+    }
+    .login-screen {
+        padding: 0 20px;
+    }
+}

@@ -1,11 +1,24 @@
-import React from 'react'
+import { Provider } from 'react-redux';
+import Body from './components/Body';
+import appStore from './utils/appStore';
+import Browse from './components/Browse';
+import { createBrowserRouter, RouterProvider, useNavigate } from "react-router-dom";
 
 const App = () => {
-  return (
-    <div>
-      <h1>NetFlix GPT</h1>
-    </div>
-  )
+    const appRouter = createBrowserRouter([
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/browse",
+        element: <Browse />,
+      },
+    ]);
+    
+  return <Provider store={appStore}>
+    <RouterProvider router={appRouter} />
+  </Provider>
 }
 
 export default App

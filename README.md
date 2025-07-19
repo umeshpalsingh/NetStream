@@ -1,5 +1,18 @@
 # Netflix GPT
 
+- Header
+- Routing of App
+- Login Form
+- Sign Up Form
+- Form Validation
+- useRef Hook
+- Firebase Setup 
+- Deploying our app to production
+- Signup User Account
+- Sign in User Account
+- Set Up Redux Store with userSlice
+
+
 # Features 
 
 - Login/Sign Up
