@@ -1,18 +1,38 @@
 import { useNavigate } from "react-router-dom";
 import { auth } from "../utils/firebase";
-import { signOut } from "firebase/auth";
-import { useSelector } from "react-redux";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { addUser, removeUser } from "../utils/userSlice";
+import {LOGO} from "../utils/constants"
 
 const Header = () => {
   const user = useSelector((store) => store.user);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Get the currently signed-in user
+    const unsubscribe =  onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in / signed up
+        const { email, displayName, uid, photoURL } = user;
+        dispatch(addUser({uid: uid, email: email, displayName: displayName, photoURL: photoURL}));
+        navigate("/browse");
+
+      } else {
+        // User is signed out
+        dispatch(removeUser())
+        navigate("/")
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   function handleSignOut() {
     signOut(auth)
-      .then(() => {
-        // Sign-out successful.
-        navigate("/");
-      })
+      .then(() => {})
       .catch((error) => {
         // An error happened.
         const errorCode = error.code;
@@ -25,7 +45,7 @@ const Header = () => {
         <div className="header-menu">
           <div className="header-logo">
             <img
-              src="https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production_2025-07-14/consent/87b6a5c0-0104-4e96-a291-092c11350111/01938dc4-59b3-7bbc-b635-c4131030e85f/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png"
+              src={LOGO}
               alt="logo"
             />
           </div>
