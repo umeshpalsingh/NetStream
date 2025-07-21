@@ -7,8 +7,8 @@ import { Navigation } from "swiper/modules";
 import MovieCard from "./MovieCard";
 
 const MovieList = ({ title, movies }) => {
-//   console.log(movies);
-
+  if(!movies) return;
+  
   return (
     <div className="movies-list">
       <h2 className="genre-title">{title}</h2>

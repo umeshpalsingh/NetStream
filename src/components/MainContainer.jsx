@@ -7,7 +7,7 @@ const MainContainer = () => {
     if(movies === null) return;
 
     // We are going to show the very first movie video in  the background
-    const mainMovie = movies[3];
+    const mainMovie = movies[0];
     const {title, id, overview} = mainMovie
     
     return (

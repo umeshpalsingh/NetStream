@@ -1,7 +1,7 @@
 import {IMG_POSTER_CDN} from "../utils/constants"
 
 const MovieCard = ({movie}) => {
-    console.log(movie);
+    // console.log(movie);
     const posterPath = movie.poster_path;
   return (
     <div className='movie-card'>
