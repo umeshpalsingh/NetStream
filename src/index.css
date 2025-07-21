@@ -349,6 +349,8 @@ a, p {
     transform: scale(1.1);
 }
 
+
+
 /* ✅ Responsive Styles */
 @media (max-width: 768px) {
     .main-movie-box {

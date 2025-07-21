@@ -27,6 +27,10 @@
 - Embedded the youtube video and make it autoplay and mute 
 - Created VideoTitle and VideoBackground Components to make the Main Container
 - Completed MainContainer
+- Created MovieList and MovieCard Components to make the Secondary Container
+- Completed SecondaryContainer
+- Fetched the Movies and Series for Different Categories like Top Rated, Popular, Upcoming, Now Playing
+- Created Custom Hooks for Each Category
 
 
 # Features 
