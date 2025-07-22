@@ -4,7 +4,7 @@ import MovieList from "./MovieList";
 const SecondaryContainer = () => {
   const movies = useSelector(state => state.movies);
   if(!movies) return;
-  console.log(movies);
+  // console.log(movies);
   
   return (
     <div className="secondary-container">

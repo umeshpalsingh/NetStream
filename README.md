@@ -31,6 +31,9 @@
 - Completed SecondaryContainer
 - Fetched the Movies and Series for Different Categories like Top Rated, Popular, Upcoming, Now Playing
 - Created Custom Hooks for Each Category
+- Planning GPT Search 
+- Toggle GPT Search on Click
+
 
 
 # Features 

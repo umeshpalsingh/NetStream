@@ -180,7 +180,7 @@ a, p {
 }
 
 .c-btn {
-    border: 0;
+    border: 1px solid transparent;
     cursor: pointer;
     width: auto;
     font-size: var(--fs-14);
@@ -349,7 +349,10 @@ a, p {
     transform: scale(1.1);
 }
 
-
+.c-btn.gpt {
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 /* ✅ Responsive Styles */
 @media (max-width: 768px) {

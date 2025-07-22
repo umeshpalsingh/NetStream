@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../utils/userSlice";
 import {LOGO} from "../utils/constants"
+import { toggleGptSearchView } from "../utils/gptSlice";
 
 const Header = () => {
   const user = useSelector((store) => store.user);
@@ -39,6 +40,11 @@ const Header = () => {
         alert(errorCode);
       });
   }
+
+  function handleGptSearchClick() {
+    dispatch(toggleGptSearchView())
+  }
+
   return (
     <header className="custom-header">
       <div className="container">
@@ -51,8 +57,9 @@ const Header = () => {
           </div>
           {user && (
             <div className="header-signout">
+              <button className="c-btn gpt" onClick={handleGptSearchClick}>GPT Search</button>
               <div className="user-photo">
-              <img src={user.photoURL} alt="user" />
+                <img src={user.photoURL} alt="user" />
               </div>
               <button className="c-btn" onClick={handleSignOut}>
                 Sign Out
