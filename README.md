@@ -33,6 +33,7 @@
 - Created Custom Hooks for Each Category
 - Planning GPT Search 
 - Toggle GPT Search on Click
+- Added Login/Signup with Google
 
 
 

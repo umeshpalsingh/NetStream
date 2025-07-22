@@ -13,6 +13,7 @@ import { provider } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 import {USER_AVATAR, BACKGROUND_IMG} from "../utils/constants";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -111,7 +112,7 @@ const Login = () => {
         // The AuthCredential type that was used.
         const credential = GoogleAuthProvider.credentialFromError(error);
         // ...
-    });
+      });
   }
 
   return (
@@ -152,8 +153,11 @@ const Login = () => {
             <div className="submit-form">
               <input type="submit" value="Submit" onClick={handleButtonClick} />
             </div>
+            <div className="or">
+              or
+            </div>
             <div className="google-login">
-              <button onClick={handleGoogleLogin}>Login with Google</button>
+              <button onClick={handleGoogleLogin}><FcGoogle /> Sign up with Google</button>
             </div>
             <div className="signup-link" onClick={toggleSignInForm}>
                {isSignInForm ? "New to Netflix?Sign up now" : "Account Login"} 
