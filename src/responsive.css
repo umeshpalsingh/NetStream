@@ -1,3 +1,31 @@
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+    .main-movie-box {
+        left: 5%;
+        right: 5%;
+        max-width: 90%;
+    }
+
+    .movie-title {
+        font-size: 2rem;
+    }
+
+    .movie-overview {
+        font-size: 1rem;
+    }
+
+    .main-btn,
+    .sec-btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .background-trailer iframe {
+        width: 180vw;
+        height: 101.25vw; /* (9/16) * 180 */
+    }
+}
+
 @media (max-width: 575px) {
     .netflix-form {
         width: 100%;

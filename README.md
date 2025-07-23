@@ -34,7 +34,9 @@
 - Planning GPT Search 
 - Toggle GPT Search on Click
 - Added Login/Signup with Google
-
+- GPT Search Bar 
+- Multi Language Feature in our App
+- GPT APIs
 
 
 # Features 
