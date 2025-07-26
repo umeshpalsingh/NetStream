@@ -157,7 +157,7 @@ const Login = () => {
               or
             </div>
             <div className="google-login">
-              <button onClick={handleGoogleLogin}><FcGoogle /> Sign up with Google</button>
+              <button onClick={handleGoogleLogin}><FcGoogle /> Continue with Google</button>
             </div>
             <div className="signup-link" onClick={toggleSignInForm}>
                {isSignInForm ? "New to Netflix?Sign up now" : "Account Login"} 

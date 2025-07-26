@@ -7,6 +7,8 @@ import { addUser, removeUser } from "../utils/userSlice";
 import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
 import { toggleGptSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
+import logo from "../assets/netstream-logo.png";
+import toggleIcon from "../assets/menu-t.png";
 
 const Header = () => {
   const user = useSelector((store) => store.user);
@@ -57,12 +59,17 @@ const Header = () => {
     dispatch(changeLanguage(e.target.value));
   }
 
+  function handleMenu() {
+    document.querySelector('.header-signout').classList.toggle("show");
+  }
+
   return (
     <header className="custom-header">
       <div className="container">
         <div className="header-menu">
           <div className="header-logo">
-            <img src={LOGO} alt="logo" />
+            <img className="logo" src={logo} alt="logo" />
+            {user && <span className="toggle-menu" onClick={handleMenu}><img src={toggleIcon} alt="icon" /></span>}
           </div>
           {user && (
             <div className="header-signout">

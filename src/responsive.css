@@ -1,19 +1,63 @@
 /* ✅ Responsive Styles */
+@media (max-width: 991px) {
+    :root {
+        --fs-40: 32px;
+        --fs-28: 24px;
+        --fs-20: 18px;
+        --fs-18: 16px;
+    }
+    .main-container {
+        height: 70vh;
+    }
+    .secondary-container {
+        padding-top: 0;
+    }
+    .movies-list:first-child {
+        margin-top: 0;
+    }
+    .custom-header {
+        background: #000;
+        padding: 10px 0;
+    }
+    .toggle-menu {
+        display: block;
+    }
+    .header-logo {
+        max-width: 100%;
+    }
+    img.logo {
+        max-width: 140px;
+    }
+    .header-signout {
+        gap: 10px;
+        justify-content: end;
+        flex-direction: column;
+        align-items: end;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 500ms ease;
+    }
+    .header-signout.show {  
+        max-height: 500px;
+    }
+    .header-menu {
+        flex-direction: column;
+    }
+    .search-bar {
+        padding: 10px;
+    }
+}
 @media (max-width: 768px) {
+    :root {
+        --fs-40: 28px;
+        --fs-28: 22px;
+    }
     .main-movie-box {
         left: 5%;
         right: 5%;
         max-width: 90%;
     }
-
-    .movie-title {
-        font-size: 2rem;
-    }
-
-    .movie-overview {
-        font-size: 1rem;
-    }
-
     .main-btn,
     .sec-btn {
         font-size: 0.9rem;
@@ -27,6 +71,12 @@
 }
 
 @media (max-width: 575px) {
+    :root {
+        --fs-40: 24px;
+        --fs-28: 20px;
+        --fs-20: 16px;
+        --fs-18: 15px;
+    }
     .netflix-form {
         width: 100%;
         padding: 40px 30px;
@@ -36,5 +86,27 @@
     }
     .login-screen {
         padding: 0 20px;
+    }
+    .main-container {
+        height: 65vh;
+    }
+    .movie-overview {
+        display: none;
+    }
+    .main-container::after {
+        background: transparent;
+    }
+}
+@media (max-width: 430px) {
+    :root {
+        --fs-40: 22px;
+        --fs-20: 14px;
+        --fs-18: 14px;
+    }
+    .main-container {
+        height: 36vh;
+    }
+    img.logo {
+        max-width: 120px;
     }
 }
