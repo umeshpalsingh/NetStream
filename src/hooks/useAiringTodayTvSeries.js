@@ -1,10 +1,12 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { API_OPTIONS } from "../utils/constants";
 import { addAiringTodayTvSeries } from "../utils/movieSlice";
 import { useEffect } from "react";
 
 const useAiringTodayTvSeries = () => {
     const dispatch = useDispatch();
+
+    const airingTodayTvSeries = useSelector(state => state.movies.airingTodayTvSeries);
 
     const getAiringTodayTvSeries = async () => {
         const data = await fetch(
@@ -16,7 +18,7 @@ const useAiringTodayTvSeries = () => {
         dispatch(addAiringTodayTvSeries(json.results))
     };
 
-    useEffect(() => {getAiringTodayTvSeries()}), [];
+    useEffect(() => {!airingTodayTvSeries && getAiringTodayTvSeries()}), [];
 }
 
 export default useAiringTodayTvSeries;

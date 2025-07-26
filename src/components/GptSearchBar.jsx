@@ -52,6 +52,7 @@ const GptSearchBar = () => {
 
       dispatch(addGptMovieResult({ movieNames, movieResults: tmdbResults }));
     } catch (err) {
+      alert("Error (Please use a faster net or do not use JIO's net beacause Jio has blocked TMDB APIs so the data will not be shown.)")
       console.error("Error fetching movie data:", err);
       dispatch(setLoading(false)); // in case of error
     }
