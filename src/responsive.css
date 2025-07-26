@@ -47,6 +47,9 @@
     .search-bar {
         padding: 10px;
     }
+    .secondary-container .swiper-button-prev::after, .secondary-container .swiper-button-next::after {
+        font-size: 22px;
+    }
 }
 @media (max-width: 768px) {
     :root {
