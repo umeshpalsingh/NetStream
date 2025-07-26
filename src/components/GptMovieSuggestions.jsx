@@ -8,7 +8,7 @@ const GptMovieSuggestions = () => {
   if (loading) return <SearchShimmer />; // show shimmer while loading
   if(!movieNames) return null;
 
-  console.log(movieNames.length);
+  // console.log(movieNames.length);
 
   return (
     <div className="movie-result-box">

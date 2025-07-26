@@ -1,7 +1,7 @@
 import { IMG_POSTER_CDN } from "../utils/constants";
 
 const MovieComponent = ({movieArr}) => {
-    console.log(movieArr);
+    // console.log(movieArr);
     const {poster_path, title} = movieArr;
     if(!poster_path) return null;
   return (
